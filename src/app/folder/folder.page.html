@@ -17,8 +17,25 @@
   <div id="container">
     <strong class="capitalize">{{ folder }}</strong>
     <hr />
-    <div *ngIf="(folder == 'Skills')">
+    <div *ngIf="(folder == 'Bio')">   
+      <ion-card >
+        <ion-card-header>
+          <ion-card-title>{{section}}</ion-card-title>
+        </ion-card-header>
       
+        <ion-card-content>
+          <div style="float: left; width:150px; height: 150px;"><img src='{{ Bio.picture }}' /></div>
+          <h1>{{ Bio.name }}</h1>
+          <h2>{{ Bio.label }}</h2>
+          <hr>
+          {{ Bio.headline }}
+          <hr>
+          <p>{{ Bio.summary }}</p>
+
+        </ion-card-content>
+      </ion-card>      
+  </div>
+    <div *ngIf="(folder == 'Skills')">   
         <ion-card *ngFor="let section of sections">
           <ion-card-header>
             <ion-card-title>{{section}}</ion-card-title>
@@ -31,21 +48,7 @@
               <ion-label color="dark">{{skill}}</ion-label>
             </ion-chip>
           </ion-card-content>
-        </ion-card>
-      
-      <!--
-      <IonItemGroup *ngFor="let section of sections">
-        <IonItemDivider>
-          <IonLabel>{{section}}</IonLabel>
-        </IonItemDivider>
-  
-        <IonItem *ngFor="let skill of getSkills(section)">
-          <IonLabel>{{skill}}</IonLabel>
-        </IonItem>
-      </IonItemGroup>
- -->
-        
-      
+        </ion-card>      
     </div>
     <!--<ul>
       <li *ngFor="let skill of Resume.skills | orderBy:skill.name">{{skill.name}}</li>

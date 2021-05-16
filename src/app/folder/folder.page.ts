@@ -15,6 +15,7 @@ import { RestApiService } from "../shared/services/rest-api.service";
 })
 export class FolderPage implements OnInit {
   Resume: any = {};
+  Bio: any = {};
   skills: any = [];
   sections: any = [];
   public folder: string;
@@ -42,6 +43,7 @@ export class FolderPage implements OnInit {
       //this.skills = this.Resume.skills;
       console.log(JSON.stringify(this.Resume));
       this.getSkillSections(this.Resume.skills);
+      this.Bio = this.Resume.basics;
     })
   }
 
