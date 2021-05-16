@@ -18,21 +18,22 @@
     <strong class="capitalize">{{ folder }}</strong>
     <hr />
     <div *ngIf="(folder == 'Skills')">
-      <!--
+      
         <ion-card *ngFor="let section of sections">
           <ion-card-header>
             <ion-card-title>{{section}}</ion-card-title>
           </ion-card-header>
         
-          <ion-card-content>-->
+          <ion-card-content>
             <!--<ion-chip color="success" *ngFor="let skill of Resume.skills"  >-->
-              <!--
+              
             <ion-chip color="success" *ngFor="let skill of getSkills(section)"  >
               <ion-label color="dark">{{skill}}</ion-label>
             </ion-chip>
           </ion-card-content>
         </ion-card>
-      -->
+      
+      <!--
       <IonItemGroup *ngFor="let section of sections">
         <IonItemDivider>
           <IonLabel>{{section}}</IonLabel>
@@ -42,7 +43,7 @@
           <IonLabel>{{skill}}</IonLabel>
         </IonItem>
       </IonItemGroup>
- 
+ -->
         
       
     </div>
